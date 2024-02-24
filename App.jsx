@@ -57,7 +57,6 @@ export default App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={'light-content'} backgroundColor={colorsPalette.bottonColor}/>
-      <KeyboardAvoidingView style={styles.container} behavior="padding">
       <Text style={styles.title}>MyWeatherApp</Text>
       <View style={styles.header}>
         <TextInput
@@ -68,7 +67,6 @@ export default App = () => {
           onChangeText={text => {
             setCity(text);
           }}
-          keyboardShouldPersistTaps="never"
         />
         <TouchableOpacity style={styles.button} onPress={fetchWeatherData}>
           <Text style={styles.weatherText}>Get my weather</Text>
@@ -117,7 +115,6 @@ export default App = () => {
         </View>
         </>
       )}
-      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
